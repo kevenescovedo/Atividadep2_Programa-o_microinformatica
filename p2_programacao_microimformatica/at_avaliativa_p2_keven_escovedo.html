@@ -1,0 +1,218 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<meta name="description" content="dr.Consulta a melhor clinica médica da região ">
+  <meta name="keywords" content="Saúde,Bem Estar,Clínica, Médica,">
+  <meta name="author" content="Keven Escovedo">
+ 
+<title>Document</title>
+<style>
+	*{
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+
+	}
+	header {
+		width: 100%;
+		height: auto;
+		min-height: 5em;
+		background-color: blue; 
+	}
+	#logo {
+		
+		height: auto;
+		display: block;
+		float: left;
+	}
+	#right {
+		display: block;
+		width: 30%;
+		height: auto;
+		float: right;
+		margin-top: 20px;
+		
+
+	}
+	#c2 {
+		margin-left: 30px;
+	}
+  a {
+  	color: #22ffff;
+
+  }
+  a:hover {
+  	color: yellow;
+  }
+  #regiao {
+  	background-color: blue;
+  	color: #22ffff;
+  	border: none;
+  }
+  h1,p {
+  	text-align: center;
+  	color: #22ffff;
+  }
+  main,form {
+  	width: 100%;
+  	margin-top: 20px;
+  }
+article {
+	width: 50%;
+
+	margin: 0 auto;
+}
+label:hover {
+	color: blue;
+	font-size: 1.4em;
+}
+
+input[type=text], input[type=number], input[type=email], input[type=date], input[type=password],#estado {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid blue;
+  background-color: #0000;
+  color: black;
+  border-radius: 4px;
+}
+fieldset {
+	margin-bottom: 40px;
+}
+.senha {
+	background-color: white;
+  background-image: url('eye.png');
+  background-position: right; 
+  background-size:25px 25px;
+  background-repeat: no-repeat;
+  padding-left:30px;
+  
+}
+input[type=submit], input[type=reset] {
+	background-color: blue;
+	color: white;
+	border: none;
+	height: auto;
+
+}
+input[type=submit]:hover, input[type=reset]:hover {
+	background-color: #22ffff;
+}
+
+</style>
+</head>
+
+<body>
+<header>
+	<img src="logo.png" alt="Dr.Consulta" id="Logo" width="150px">
+	<div id="right"><span>Estou em <select id="regiao">
+		<option value="SP">SP</option>
+	</select></span> <span id="c2"><a href="entrar.html">Entar</a> ou <a href="Cadastra-se.html">Cadastra-se</a></span></div> 
+<h1>Cadastar Conta</h1>
+<p>Crie uma conta é uma vez só, e você poderar agendar sempre o que quiser e acessar todo seu historico</p>
+</header>
+<main>
+	<article>
+		<form action="/cadastrar.php" method="post">
+	    <label for="fname">Nome Completo:</label><br>
+  <input type="text" id="fname" name="fname" value="" placeholder=" ex: João Nogueira Santos" autofocus="on" required="" maxlength="200"  ><br>
+  
+  <label for="lRG">RG:</label><br>
+  <input type="text" id="lRG" name="lRG" value="" required=""  placeholder="ex: 23.483.321-8" minlength="12" maxlength="12"><br><br>
+   <label for="lRG">CPf:</label><br>
+  <input type="text" id="lCPF" name="lCPF" value="" required=""  placeholder="ex:861.639.755-88" minlength="14" maxlength="14"><br><br>
+  <fieldset>
+  	<legend>Sexo:</legend>
+  <input type="radio" id="male" name="sexo" value="Masculino" required="">
+<label for="male">Masculino</label><br>
+<input type="radio" id="female" name="sexo" value="Feminimo">
+<label for="female">Feminimo</label><br>
+</fieldset>
+ <fieldset>
+  	<legend>Estado civil:</legend>
+  <input type="radio" id="casado" name="estado" value="casado" required="">
+<label for="casado">Casado</label><br>
+<input type="radio" id="solteiro" name="estado" value="solteiro">
+<label for="solteiro">Solteiro</label><br>
+<input type="radio" id="viuvo" name="estado" value="viuvo">
+<label for="viuvo">Viuvo</label><br>
+<input type="radio" id="comprometido" name="estado" value="comprometido">
+<label for="comprometido">Compremetido</label><br>
+</fieldset>
+<fieldset>
+  	<legend>Endereço:</legend>
+  <label for="lrua">Rua:</label><br>
+  <input type="text" id="lrua" name="lrua" value="" required="" minlength="3" placeholder="ex:Rua Dejair Alcantara" maxlength="200"><br><br>
+
+   <label for="lnumero">numero:</label><br>
+  <input type="text" id="lnumero" name="lnumero" value="" required="" minlength="3"  placeholder="ex:871" maxlength="5"><br><br>
+   <label for="estado">Estado:</label><br>
+  <select id="estado" name="estado">
+    <option value="AC">Acre</option>
+    <option value="AL">Alagoas</option>
+    <option value="AP">Amapá</option>
+    <option value="AM">Amazonas</option>
+    <option value="BA">Bahia</option>
+    <option value="CE">Ceará</option>
+    <option value="DF">Distrito Federal</option>
+    <option value="ES">Espírito Santo</option>
+    <option value="GO">Goiás</option>
+    <option value="MA">Maranhão</option>
+    <option value="MT">Mato Grosso</option>
+    <option value="MS">Mato Grosso do Sul</option>
+    <option value="MG">Minas Gerais</option>
+    <option value="PA">Pará</option>
+    <option value="PB">Paraíba</option>
+    <option value="PR">Paraná</option>
+    <option value="PE">Pernambuco</option>
+    <option value="PI">Piauí</option>
+    <option value="RJ">Rio de Janeiro</option>
+    <option value="RN">Rio Grande do Norte</option>
+    <option value="RS">Rio Grande do Sul</option>
+    <option value="RO">Rondônia</option>
+    <option value="RR">Roraima</option>
+    <option value="SC">Santa Catarina</option>
+    <option value="SP">São Paulo</option>
+    <option value="SE">Sergipe</option>
+    <option value="TO">Tocantins</option>
+    <option value="EX">Estrangeiro</option>
+</select>
+<label for="cidade">Cidade:</label><br>
+  <input type="text" id="cidade" name="cidade" value="" required=""  placeholder="ex:Presidente Prudente" maxlength="200"><br><br>
+</fieldset>
+
+  <fieldset>
+  	<legend>Contado:</legend>
+  	<label for="email">Email:</label><br>
+  <input type="email" id="email" name="email" value="" required=""  placeholder="ex: algumacoisa@gmail.com" maxlength="20"><br><br>
+  <label for="tel">Telefone Residencial:</label><br>
+  <input type="number" id="tel" name="tel" value="" required="" minlength="8"  placeholder="ex: 32226629" maxlength="8"><br><br>
+  <label for="tel"> Celular:</label><br>
+  <input type="number" id="cel" name="cel" value="" required="" minlength="11" placeholder="ex: 18996640661" maxlength="11"><br><br>
+
+
+  
+</fieldset>
+
+  	<label for="data">Data de nascimento:</label><br>
+  <input type="date" id="data" name="data" value="" max="2020-06-26"  min="1900-01-01" ><br><br>
+
+  	<label for="senha">Senha:</label><br>
+  <input type="password" id="senha" name="password" value="" minlength="3" placeholder="ex: rr@4004"   maxlength="20" class="senha"><br><br>
+  	<label for="csenha">Confirmar Senha:</label><br>
+  <input type="password" id="csenha" name="cpassword" value="" minlength="3" placeholder="ex: rr@4004" maxlength="20" class="senha"><br><br>
+
+ 
+
+
+
+  <input type="submit" value="Enviar">
+  <input type="reset" value="Redefinir">
+		</form>
+	</article>
+</main>
+</body>
+</html>
